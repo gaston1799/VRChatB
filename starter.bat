@@ -1,7 +1,7 @@
 echo off
 RMDIR /S /Q ok
-git clone https://github.com/naquangaston/modpckinstaller ok
-notepad ok/wtgf/README.md
+git clone https://github.com/naquangaston/VRChatB ok
+notepad ok/README.md
 :A
     cls
     echo.
@@ -21,7 +21,7 @@ notepad ok/wtgf/README.md
 
 :No
 echo Save and run the file that is downloaded
-start ok/wtgf/webv.html
+start ok/webv.html
 pause
 RMDIR /S /Q ok
 start /b "" cmd /c del "%~f0"&exit /b
@@ -37,11 +37,10 @@ echo installing requirments
 npm i fs -g > nul
 echo "Install done"
 echo Generating file
-ok\wtgf\node index
+ok\node index
 Run_me.cmd
 pause
 RMDIR /S /Q ok
-start /b "" cmd /c del "%~f0"&exit /b
 exit
 :install
 title downloading node-v16.13.0-x64.msi

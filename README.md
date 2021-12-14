@@ -1,6 +1,8 @@
 ### modpckinstaller
 public modpack installer for vrchat
 this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+# V-2.3
+-Fixed some more crap
 # V-2.2
 -Acaully fixed the installer so it works
 # V-2.1

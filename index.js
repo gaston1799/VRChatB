@@ -98,6 +98,7 @@ var _ = [
     "https://api.vrcmg.com/v0/mods/171/TrueShaderAntiCrash.dll",
     "https://api.vrcmg.com/v0/mods/245/PrivateInstanceIcon.dll",
     "https://api.vrcmg.com/v0/mods/239/ScreenshotManager.dll",
+    "https://github.com/9E4ECDDE/MultiplayerDynamicBonesMod/releases/download/1043.2/MultiplayerDynamicBonesMod.dll",
     "https://api.vrcmg.com/v0/mods/112/DoubleTapRunner.dll",
     "https://api.vrcmg.com/v0/mods/102/BTKSAGestureMod.dll",
     "https://api.vrcmg.com/v0/mods/221/NoOutlines.dll",

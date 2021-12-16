@@ -78,6 +78,7 @@ KinectTrackingExtension
 VRCQR`.split('\n').indexOf(e) < 0);
 var _ = [
     "https://api.vrcmg.com/v0/mods/255/NetworkSanity.dll",
+    "https://github.com/benaclejames/VRCFaceTracking/releases/download/v2.5.1/VRCFaceTracking.dll",
     "https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll",
     "https://api.vrcmg.com/v0/mods/247/ml_alg.dll",
     "https://dl.emmvrc.com/downloads/emmVRCLoader.dll",
@@ -174,7 +175,7 @@ if (typeof document != "undefined") {
                 if not errorlevel 1 (
                     @echo on
                     set gameFound=1
-                    set gamePath=%%F
+                    set gamePath="%%F"
                     echo found game
                     @echo off
                     goto foundG

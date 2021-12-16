@@ -1,6 +1,8 @@
 ### modpckinstaller
 public modpack installer for vrchat
 this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+# V-2.5
+-fixed game finder not working when folder contains a space
 # V-2.4
 -updated bones mod
 # V-2.3

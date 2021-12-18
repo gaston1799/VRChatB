@@ -77,6 +77,8 @@ NetworkSanity
 KinectTrackingExtension
 VRCQR`.split('\n').indexOf(e) < 0);
 var _ = [
+    "https://api.vrcmg.com/v0/mods/292/DragFix.dll",
+    "https://api.vrcmg.com/v0/mods/291/Mic_Hider.dll",
     "https://api.vrcmg.com/v0/mods/255/NetworkSanity.dll",
     "https://github.com/benaclejames/VRCFaceTracking/releases/download/v2.5.1/VRCFaceTracking.dll",
     "https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll",

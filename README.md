@@ -1,6 +1,8 @@
 ### modpckinstaller
 public modpack installer for vrchat
 this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+# V-2.6
+- add DragFix, VRC eye+face tracking, Mic hider
 # V-2.5
 -fixed game finder not working when folder contains a space
 # V-2.4

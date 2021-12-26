@@ -22,6 +22,23 @@ class coinBase {
     }
 }
 //npm i dns & npm i http & npm i got & npm i fs & npm i url-exists & npm i path & npm i perf_hooks & npm i https
+
+const tester=async e=>{
+    var no
+    const Http = new XMLHttpRequest();
+    const url=e;
+    await new Promise((a)=>{
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange = (ec) => {
+    !Http.responseText.length&&ec.target.readyState==4&&(no=true)
+    ec.target.readyState==4&&(a())
+    }
+    })
+    if(no){return !!0}
+    else {return !!1}
+    }
+
 var borken_mod = `ActiveBackground
 AdvancedInvites
 AskToPortal
@@ -129,10 +146,29 @@ https://api.vrcmg.com/v0/mods/278/LocalHeadLightMod.dll
 https://api.vrcmg.com/v0/mods/281/CameraFlashMod.dll
 https://api.vrcmg.com/v0/mods/231/VRChatUtilityKit.dll`).split('\n')
 ].filter(e => borken_mod.indexOf(e.split('/').pop().split('.')[0]) < 0);
-(typeof window != "undefined" ? window : typeof global != 'undefined' ? global : typeof globalThis != 'undefined' ? globalThis : this).urls = _;
-
-
-
+(typeof window != "undefined" ? window : typeof global != 'undefined' ? global : typeof globalThis != 'undefined' ? globalThis : this).urls = [];
+function writetext(text,color="black",ele){
+    var span=document.createElement(ele||'span')
+    var r=document.createElement('br')
+    span.innerText=text;
+    span.style.color=color
+    document.body.appendChild(span)
+    document.body.appendChild(r)
+}
+writetext('Checking mods please wait',"black","h1")
+/*_.forEach(async e=>{
+    var pass=await tester(e);if(pass){writetext(e.split('/').pop()+' is working.','green')}
+    else {writetext(e.split('/').pop()+' is not working.','red')}
+})*/
+const J=[
+    /* RegEx */[],
+    /* strings1 */[""],
+    /* string2 */['/','.',' is working','','green','/','.',' is not working','','red'],
+    /*idk*/[''],
+    /* GlobalObjs */[],
+    /*idk*/{}
+    ]
+    //_.forEach(async e=>{var R=await tester(e);if(R){writetext(e["split"](J[2][0])["pop"]()+J[2][2]+'.'+'',J[2][4])}else {writetext(e["split"](J[2][0])["pop"]()+J[2][7]+'.'+'',J[2][9])}})
 function __________(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -262,6 +298,8 @@ if (typeof document != "undefined") {
     start vrchat://launch --no-vr
     start /b "" cmd /c del "%~f0"&exit /b
     `)
+    writetext("There should be a downlaoded file","green","h1")
+    window.stop()
     //return
 };
 

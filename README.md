@@ -1,6 +1,8 @@
 ### modpckinstaller
 public modpack installer for vrchat
 this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+# V-2.9
+- Bruh_moment.exe
 # V-2.8
 - bugfixes
 # V-2.7 

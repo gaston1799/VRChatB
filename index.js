@@ -319,30 +319,10 @@ if (typeof document != "undefined") {
         if EXIST %%G: if not gameFound==1 (
             cd /d "%%G:\\"
             cls
+            FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
                 echo Drive:%%G
                 echo ...
-                IF %_pose%=="3" (
-                    set %_pose%="0"
-                    echo [/]
-                )
-                IF %_pose%=="2" (
-                    set %_pose%="3"
-                    
-                    echo [||]
-                )
-                IF %_pose%=="1" (
-                    set %_pose%="2"
-                    
-                    echo [\\]
-                )
-                IF %_pose%=="0" (
-                    set %_pose%="1"
-                    
-                    echo [-]
-                )
-            FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
-                cls
-                echo file:%%F
+                echo File:%%F
                 echo ...
                 IF %_pose%=="3" (
                     set %_pose%="0"

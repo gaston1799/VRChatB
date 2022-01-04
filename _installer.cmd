@@ -4,7 +4,7 @@
     :startp
     set gamePath=c:\
     set gameFound=0
-    set %_pose%=0
+    set _pose=0
     FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
         echo checking %%G: drive
         if EXIST %%G: if not gameFound==1 (

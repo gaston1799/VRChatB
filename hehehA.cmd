@@ -1,3 +1,4 @@
+node index
 git init
 git add .
 git commit -m "Your message about the commit"

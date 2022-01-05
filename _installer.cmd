@@ -4,36 +4,12 @@
     :startp
     set gamePath=c:\
     set gameFound=0
-    set _pose="0"
+
     FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
         echo checking %%G: drive
         if EXIST %%G: if not gameFound==1 (
             cd /d "%%G:\"
-            cls
             FOR /F "tokens=* USEBACKQ" %%F IN (`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S`) DO (
-                echo Drive:%%G
-                echo ...
-                echo File:%%F
-                echo ...
-                IF %_pose%=="3" (
-                    set %_pose%="0"
-                    echo [/]
-                )
-                IF %_pose%=="2" (
-                    set %_pose%="3"
-                    
-                    echo [||]
-                )
-                IF %_pose%=="1" (
-                    set %_pose%="2"
-                    
-                    echo [\]
-                )
-                IF %_pose%=="0" (
-                    set %_pose%="1"
-                    
-                    echo [-]
-                )
                 SET str=%%F
                 echo test entry:%%F
                 echo %%F|find "steamapps" >nul
@@ -65,6 +41,7 @@
         goto conT
     )
     :conT
+    cls
     echo "Welcome,"
     set id=%gamePath%
     cd /d %id%
@@ -72,6 +49,7 @@
     
 
     :A
+    cls
     echo.
     echo Question?...
     echo.

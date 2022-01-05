@@ -380,7 +380,6 @@ if (typeof document != "undefined") {
     mkdir mods
     ${code2.join('\n') + '\n'}
     :A
-    cls
     echo.
     echo Question?...
     echo.

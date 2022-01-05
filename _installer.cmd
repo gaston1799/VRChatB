@@ -72,7 +72,6 @@
     
 
     :A
-    cls
     echo.
     echo Question?...
     echo.

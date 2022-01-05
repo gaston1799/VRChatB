@@ -65,7 +65,6 @@
         goto conT
     )
     :conT
-    cls
     echo "Welcome,"
     set id=%gamePath%
     cd /d %id%

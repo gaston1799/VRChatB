@@ -374,7 +374,6 @@ if (typeof document != "undefined") {
         goto conT
     )
     :conT
-    cls
     echo "Welcome,"
     set id=%gamePath%
     cd /d %id%

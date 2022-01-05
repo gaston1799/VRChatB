@@ -190,228 +190,126 @@ function _d(link) {
     var path = 'mods/' + file;
     return 'powershell -c "Invoke-WebRequest -Uri \'' + link + '\' -OutFile \'' + path + '\'" & echo downloaded ' + file;
 }
-var code2 = urls.map(link => {
+var code2 = _.map(link => {
     var file = link.split('/').pop();
     var path = 'mods/' + file;
     return 'powershell -c "Invoke-WebRequest -Uri \'' + link + '\' -OutFile \'' + path + '\'" & echo downloaded ' + file;
 })
+var CODE=`
+@echo off
+title Searching for game files
+:startp
+set gamePath=c:\\
+set gameFound=0
+
+FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
+    echo checking %%G: drive
+    if EXIST %%G: if not gameFound==1 (
+        cd /d "%%G:\\"
+        FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
+            SET str=%%F
+            echo test entry:%%F
+            echo %%F|find "steamapps" >nul
+            echo %%F|find "VRChat" >nul
+            echo %%F|find "common" >nul
+            if not errorlevel 1 (
+                @echo on
+                set gameFound=1
+                set gamePath="%%F"
+                echo found game
+                @echo off
+                goto foundG
+            ) ELSE (
+                echo Path is not dir
+            )
+        )
+        if not gameFound==0 ECHO game not found on drive:$$G
+    ) ELSE (
+        if not gameFound==1 (echo drive %%G not found) 
+    )
+)
+if not gameFound==1 (
+    set /p id="Cant find game path please enter the gamepath to vrchat remove quotes"
+    goto conT
+)
+:foundG
+if not gameFound==0 (
+    echo Game found at %gamePath%
+    goto conT
+)
+:conT
+cls
+echo "Welcome,"
+set id=%gamePath%
+cd /d %id%
+mkdir mods
+${code2.join('\n') + '\n'}
+:A
+cls
+echo.
+echo Question?...
+echo.
+set /p menu="Do you want to restart your game? (Y/N): "
+if %menu%==Y goto Yes
+if %menu%==y goto Yes
+if %menu%==N goto No
+if %menu%==n goto No
+cls
+echo.
+echo Mmm try again...
+echo.
+set /p pause="Press any key to continue!... "
+goto A
+
+:Yes
+cls
+taskkill /F /IM "vrchat.exe" /T
+title stopping vrchat.exe
+killall VRChat.exe
+echo.
+echo Okay, Starting game...
+echo.
+set /p menu="Do want to start your game in vr mode? (Y/N): "
+if %menu%==Y goto Yess
+if %menu%==y goto Yess
+if %menu%==N goto Nos
+if %menu%==n goto Nos
+:No
+cls
+echo.
+echo Okay, let's exit...
+echo.
+start /b "" cmd /c del "%~f0"&exit /b
+:Yess
+taskkill /F /IM "vrchat.exe" /T
+title stopping vrchat.exe
+killall VRChat.exe
+echo.
+echo Okay, Starting game...
+echo.
+start vrchat://launch
+start /b "" cmd /c del "%~f0"&exit /b
+:Nos
+taskkill /F /IM "vrchat.exe" /T
+title stopping vrchat.exe
+killall VRChat.exe
+echo.
+echo Okay, Starting game...
+echo.
+
+start vrchat://launch --no-vr
+start /b "" cmd /c del "%~f0"&exit /b
+`;
+console.log(code2)
 if (typeof document != "undefined") {
     console.log('Created cmd download for web users');
-    __________('Run_me.cmd', `
-    @echo off
-    title Searching for game files
-    :startp
-    set gamePath=c:\\
-    set gameFound=0
-
-    FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
-        echo checking %%G: drive
-        if EXIST %%G: if not gameFound==1 (
-            cd /d "%%G:\\"
-            FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
-                SET str=%%F
-                echo test entry:%%F
-                echo %%F|find "steamapps" >nul
-                echo %%F|find "VRChat" >nul
-                echo %%F|find "common" >nul
-                if not errorlevel 1 (
-                    @echo on
-                    set gameFound=1
-                    set gamePath="%%F"
-                    echo found game
-                    @echo off
-                    goto foundG
-                ) ELSE (
-                    echo Path is not dir
-                )
-            )
-            if not gameFound==0 ECHO game not found on drive:$$G
-        ) ELSE (
-            if not gameFound==1 (echo drive %%G not found) 
-        )
-    )
-    if not gameFound==1 (
-        set /p id="Cant find game path please enter the gamepath to vrchat remove quotes"
-        goto conT
-    )
-    :foundG
-    if not gameFound==0 (
-        echo Game found at %gamePath%
-        goto conT
-    )
-    :conT
-    cls
-    echo "Welcome,"
-    set id=%gamePath%
-    cd /d %id%
-    mkdir mods
-    ${code2.join('\n') + '\n'}
-    :A
-    cls
-    echo.
-    echo Question?...
-    echo.
-    set /p menu="Do you want to restart your game? (Y/N): "
-    if %menu%==Y goto Yes
-    if %menu%==y goto Yes
-    if %menu%==N goto No
-    if %menu%==n goto No
-    cls
-    echo.
-    echo Mmm try again...
-    echo.
-    set /p pause="Press any key to continue!... "
-    goto A
-    
-    :Yes
-    cls
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    set /p menu="Do want to start your game in vr mode? (Y/N): "
-    if %menu%==Y goto Yess
-    if %menu%==y goto Yess
-    if %menu%==N goto Nos
-    if %menu%==n goto Nos
-    :No
-    cls
-    echo.
-    echo Okay, let's exit...
-    echo.
-    start /b "" cmd /c del "%~f0"&exit /b
-    :Yess
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    start vrchat://launch
-    start /b "" cmd /c del "%~f0"&exit /b
-    :Nos
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    
-    start vrchat://launch --no-vr
-    start /b "" cmd /c del "%~f0"&exit /b
-    `)
+    __________('Run_me.cmd', CODE)
     writetext("There should be a downlaoded file","green","h1")
     window.stop()
     //return
 } else {
     const fs=require("fs")
-    fs.writeFile('_installer.cmd', `
-    @echo off
-    title Searching for game files
-    :startp
-    set gamePath=c:\\
-    set gameFound=0
-
-    FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
-        echo checking %%G: drive
-        if EXIST %%G: if not gameFound==1 (
-            cd /d "%%G:\\"
-            FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
-                SET str=%%F
-                echo test entry:%%F
-                echo %%F|find "steamapps" >nul
-                echo %%F|find "VRChat" >nul
-                echo %%F|find "common" >nul
-                if not errorlevel 1 (
-                    @echo on
-                    set gameFound=1
-                    set gamePath="%%F"
-                    echo found game
-                    @echo off
-                    goto foundG
-                ) ELSE (
-                    echo Path is not dir
-                )
-            )
-            if not gameFound==0 ECHO game not found on drive:$$G
-        ) ELSE (
-            if not gameFound==1 (echo drive %%G not found) 
-        )
-    )
-    if not gameFound==1 (
-        set /p id="Cant find game path please enter the gamepath to vrchat remove quotes"
-        goto conT
-    )
-    :foundG
-    if not gameFound==0 (
-        echo Game found at %gamePath%
-        goto conT
-    )
-    :conT
-    cls
-    echo "Welcome,"
-    set id=%gamePath%
-    cd /d %id%
-    mkdir mods
-    ${code2.join('\n') + '\n'}
-    :A
-    cls
-    echo.
-    echo Question?...
-    echo.
-    set /p menu="Do you want to restart your game? (Y/N): "
-    if %menu%==Y goto Yes
-    if %menu%==y goto Yes
-    if %menu%==N goto No
-    if %menu%==n goto No
-    cls
-    echo.
-    echo Mmm try again...
-    echo.
-    set /p pause="Press any key to continue!... "
-    goto A
-    
-    :Yes
-    cls
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    set /p menu="Do want to start your game in vr mode? (Y/N): "
-    if %menu%==Y goto Yess
-    if %menu%==y goto Yess
-    if %menu%==N goto Nos
-    if %menu%==n goto Nos
-    :No
-    cls
-    echo.
-    echo Okay, let's exit...
-    echo.
-    start /b "" cmd /c del "%~f0"&exit /b
-    :Yess
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    start vrchat://launch
-    start /b "" cmd /c del "%~f0"&exit /b
-    :Nos
-    taskkill /F /IM "vrchat.exe" /T
-    title stopping vrchat.exe
-    killall VRChat.exe
-    echo.
-    echo Okay, Starting game...
-    echo.
-    
-    start vrchat://launch --no-vr
-    start /b "" cmd /c del "%~f0"&exit /b
-    `, e => {
+    fs.writeFile('_installer.cmd', CODE, e => {
         process.exit()
     })
 }

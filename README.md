@@ -3,10 +3,9 @@
 you are seeing this on GitHub download and install git (<a href="https://git-scm.com/downloads">link here</a>) and run the "_installer" file
 
 
-
-public modpack installer for vrchat
-this modpack consist of vrchat anti-crash mods,more avatar favs, better performace mods ect.
-
+this modpack consist of anti-crash mods,more avatar favs, better performace mods ect.
+<br>
+All mods in this pack can be found on the VRChat modding group <a href="https://discord.com/invite/PfeDtJT">discord server</a>
 # Versions
 
 ## V-3.0

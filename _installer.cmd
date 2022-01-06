@@ -9,13 +9,18 @@ FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
     echo checking %%G: drive
     if EXIST %%G: if not gameFound==1 (
         cd /d "%%G:\"
-        FOR /F "tokens=* USEBACKQ" %%F IN (`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S`) DO (
+        FOR /F "tokens=* USEBACKQ" %%F IN (`dir /s /b /A:D /A:-H /A:-A /A:-S`) DO (
+            cls
+            echo Drive:%%G
+            echo ...
+            echo File:%%F
+            echo ...
             SET str=%%F
-            echo test entry:%%F
             echo %%F|find "steamapps" >nul
             echo %%F|find "VRChat" >nul
             echo %%F|find "common" >nul
             if not errorlevel 1 (
+                echo is game :true
                 @echo on
                 set gameFound=1
                 set gamePath="%%F"
@@ -23,7 +28,7 @@ FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
                 @echo off
                 goto foundG
             ) ELSE (
-                echo Path is not dir
+                echo is game :false
             )
         )
         if not gameFound==0 ECHO game not found on drive:$$G

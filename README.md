@@ -1,11 +1,14 @@
 # VRChat mod installer
 
-you are seeing this on GitHub Downlaod and install git and run the "_installer" file
+you are seeing this on GitHub download and install git (<a href="https://git-scm.com/downloads">link here</a>) and run the "_installer" file
 
 
 
 public modpack installer for vrchat
-this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+this modpack consist of vrchat anti-crash mods,more avatar favs, better performace mods ect.
+
+# Versions
+
 ## V-3.0
 - Fixed mods not downloading
 ## V-2.9

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-### modpckinstaller
-IF you are seeing this on GitHub Downlaod and install git and run the "_installer" file
-public modpack installer for vrchat
-this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
-# V-3.1
-# V-3.0
-=======
 # VRChat mod installer
 
 you are seeing this on GitHub download and install git (<a href="https://git-scm.com/downloads">link here</a>) and run the "_installer" file
@@ -16,8 +8,9 @@ this modpack consist of anti-crash mods,more avatar favs, better performace mods
 All mods in this pack can be found on the VRChat modding group <a href="https://discord.com/invite/PfeDtJT">discord server</a>
 # Versions
 
+## V-3.1
+
 ## V-3.0
->>>>>>> 7bfb17717a07fd92ad658fcfa81299abfa59eb4e
 - Fixed mods not downloading
 ## V-2.9
 - Bruh_moment.exe

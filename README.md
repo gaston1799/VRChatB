@@ -2,6 +2,7 @@
 IF you are seeing this on GitHub Downlaod and install git and run the "_installer" file
 public modpack installer for vrchat
 this modpack consist of vrchat anticrashers,more avatar favs, better performace mods ect.
+# V-3.1
 # V-3.0
 - Fixed mods not downloading
 # V-2.9

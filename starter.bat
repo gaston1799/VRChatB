@@ -20,7 +20,7 @@ notepad ok/README.md
     goto A
 
 :No
-echo Save and run the file that is downloaded
+echo This may take a few minutes
 start ok/webv.html
 pause
 RMDIR /S /Q ok

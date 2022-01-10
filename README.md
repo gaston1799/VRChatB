@@ -9,7 +9,7 @@ All mods in this pack can be found on the VRChat modding group <a href="https://
 # Versions
 
 ## V-3.1
-
+- Faster install
 ## V-3.0
 - Fixed mods not downloading
 ## V-2.9

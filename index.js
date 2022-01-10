@@ -206,7 +206,7 @@ FOR %%G IN (c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) DO (
     echo checking %%G: drive
     if EXIST %%G: if not gameFound==1 (
         cd /d "%%G:\\"
-        FOR /F "tokens=* USEBACKQ" %%F IN (\`dir /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
+        FOR /F "tokens=* USEBACKQ" %%F IN (\`dir VRChat /s /b /A:D /A:-H /A:-A /A:-S\`) DO (
             cls
             echo Drive:%%G
             echo ...

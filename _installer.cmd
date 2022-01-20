@@ -51,13 +51,23 @@ echo "Welcome,"
 set id=%gamePath%
 cd /d %id%
 mkdir mods
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/155/IKTweaks.dll' -OutFile 'mods/IKTweaks.dll'" & echo downloaded IKTweaks.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/292/DragFix.dll' -OutFile 'mods/DragFix.dll'" & echo downloaded DragFix.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll' -OutFile 'mods/CameraAnimation.dll'" & echo downloaded CameraAnimation.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/236/UserHistory.dll' -OutFile 'mods/UserHistory.dll'" & echo downloaded UserHistory.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/293/VRCX-Companion.dll' -OutFile 'mods/VRCX-Companion.dll'" & echo downloaded VRCX-Companion.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/296/MltnWorldTweaks.dll' -OutFile 'mods/MltnWorldTweaks.dll'" & echo downloaded MltnWorldTweaks.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/295/BetterLocomotion.dll' -OutFile 'mods/BetterLocomotion.dll'" & echo downloaded BetterLocomotion.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/291/Mic_Hider.dll' -OutFile 'mods/Mic_Hider.dll'" & echo downloaded Mic_Hider.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/294/CrawlSpeedToggle.dll' -OutFile 'mods/CrawlSpeedToggle.dll'" & echo downloaded CrawlSpeedToggle.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/255/NetworkSanity.dll' -OutFile 'mods/NetworkSanity.dll'" & echo downloaded NetworkSanity.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/173/BetterSteadycam.dll' -OutFile 'mods/BetterSteadycam.dll'" & echo downloaded BetterSteadycam.dll
 powershell -c "Invoke-WebRequest -Uri 'https://github.com/benaclejames/VRCFaceTracking/releases/download/v2.5.1/VRCFaceTracking.dll' -OutFile 'mods/VRCFaceTracking.dll'" & echo downloaded VRCFaceTracking.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll' -OutFile 'mods/CameraAnimation.dll'" & echo downloaded CameraAnimation.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/247/ml_alg.dll' -OutFile 'mods/ml_alg.dll'" & echo downloaded ml_alg.dll
 powershell -c "Invoke-WebRequest -Uri 'https://dl.emmvrc.com/downloads/emmVRCLoader.dll' -OutFile 'mods/emmVRCLoader.dll'" & echo downloaded emmVRCLoader.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/152/AskToPortal.dll' -OutFile 'mods/AskToPortal.dll'" & echo downloaded AskToPortal.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/145/UserInfoExtensions.dll' -OutFile 'mods/UserInfoExtensions.dll'" & echo downloaded UserInfoExtensions.dll
 powershell -c "Invoke-WebRequest -Uri 'https://cdn.discordapp.com/attachments/898965007247765604/899010243646865439/ReModCE.Loader.dll' -OutFile 'mods/ReModCE.Loader.dll'" & echo downloaded ReModCE.Loader.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/264/MuteTTS.dll' -OutFile 'mods/MuteTTS.dll'" & echo downloaded MuteTTS.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/231/VRChatUtilityKit.dll' -OutFile 'mods/VRChatUtilityKit.dll'" & echo downloaded VRChatUtilityKit.dll
@@ -78,6 +88,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/112/DoubleT
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/102/BTKSAGestureMod.dll' -OutFile 'mods/BTKSAGestureMod.dll'" & echo downloaded BTKSAGestureMod.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/221/NoOutlines.dll' -OutFile 'mods/NoOutlines.dll'" & echo downloaded NoOutlines.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/218/PanicButtonRework.dll' -OutFile 'mods/PanicButtonRework.dll'" & echo downloaded PanicButtonRework.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/173/BetterSteadycam.dll' -OutFile 'mods/BetterSteadycam.dll'" & echo downloaded BetterSteadycam.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/106/OGTrustRanks.dll' -OutFile 'mods/OGTrustRanks.dll'" & echo downloaded OGTrustRanks.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/42/DesktopCamera.dll' -OutFile 'mods/DesktopCamera.dll'" & echo downloaded DesktopCamera.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/148/CloningBeGone.dll' -OutFile 'mods/CloningBeGone.dll'" & echo downloaded CloningBeGone.dll
@@ -88,6 +99,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/133/FinalIK
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/56/MirrorResolutionUnlimiter.dll' -OutFile 'mods/MirrorResolutionUnlimiter.dll'" & echo downloaded MirrorResolutionUnlimiter.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/210/SettingsRestart.dll' -OutFile 'mods/SettingsRestart.dll'" & echo downloaded SettingsRestart.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/114/PostProcessing.dll' -OutFile 'mods/PostProcessing.dll'" & echo downloaded PostProcessing.dll
+powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/115/ToggleMicIcon.dll' -OutFile 'mods/ToggleMicIcon.dll'" & echo downloaded ToggleMicIcon.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/77/UniversalGamePriorityMod.dll' -OutFile 'mods/UniversalGamePriorityMod.dll'" & echo downloaded UniversalGamePriorityMod.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/211/TeleportCameraToYou.dll' -OutFile 'mods/TeleportCameraToYou.dll'" & echo downloaded TeleportCameraToYou.dll
 powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/272/VRCQR.dll' -OutFile 'mods/VRCQR.dll'" & echo downloaded VRCQR.dll

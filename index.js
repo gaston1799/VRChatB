@@ -80,10 +80,7 @@ SmallUserVolume
 StandaloneThirdPerson
 TeleporterVR
 TextChat
-ToggleMicIcon
 UnmuteSound
-UserHistory
-UserInfoExtensions
 VRCPlusPet
 VRCWSLibary
 WorldPredownload`.split('\n').filter(e => `DesktopCamera
@@ -92,15 +89,35 @@ CalibrationLinesVisualizer
 ScreenshotManager
 NetworkSanity
 KinectTrackingExtension
+IKTweaks
+MltnWorldTweaks
+BetterLocomotion
+VRCXCompanion
+UserHistory
+AskToPortal
+BetterSteadycam
+UserInfoExtensions
+VRChatUtilityKit
+AskToPortal
 VRCQR`.split('\n').indexOf(e) < 0);
 var _ = [
+    "https://api.vrcmg.com/v0/mods/155/IKTweaks.dll",
     "https://api.vrcmg.com/v0/mods/292/DragFix.dll",
+    "https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll",
+    "https://api.vrcmg.com/v0/mods/236/UserHistory.dll",
+    "https://api.vrcmg.com/v0/mods/293/VRCX-Companion.dll",
+    "https://api.vrcmg.com/v0/mods/296/MltnWorldTweaks.dll",
+    "https://api.vrcmg.com/v0/mods/295/BetterLocomotion.dll",
     "https://api.vrcmg.com/v0/mods/291/Mic_Hider.dll",
+    "https://api.vrcmg.com/v0/mods/294/CrawlSpeedToggle.dll",
     "https://api.vrcmg.com/v0/mods/255/NetworkSanity.dll",
+    "https://api.vrcmg.com/v0/mods/173/BetterSteadycam.dll",
     "https://github.com/benaclejames/VRCFaceTracking/releases/download/v2.5.1/VRCFaceTracking.dll",
     "https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll",
     "https://api.vrcmg.com/v0/mods/247/ml_alg.dll",
     "https://dl.emmvrc.com/downloads/emmVRCLoader.dll",
+    "https://api.vrcmg.com/v0/mods/152/AskToPortal.dll",
+    "https://api.vrcmg.com/v0/mods/145/UserInfoExtensions.dll",
     "https://cdn.discordapp.com/attachments/898965007247765604/899010243646865439/ReModCE.Loader.dll",
     "https://api.vrcmg.com/v0/mods/264/MuteTTS.dll",
     "https://api.vrcmg.com/v0/mods/231/VRChatUtilityKit.dll",

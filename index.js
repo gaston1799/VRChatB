@@ -329,7 +329,7 @@ function __________(filename, text) {
 function _d(link) {
     var file = link.split('/').pop();
     var path = 'mods/' + file;
-    return `if exist "${file}" (
+    return `if exist "mods/${file}" (
         echo ${file} alreasy exist
     ) else (
         ${'powershell -c "Invoke-WebRequest -Uri \'' + link + '\' -OutFile \'' + path + '\'" & echo downloaded ' + file}
@@ -338,7 +338,7 @@ function _d(link) {
 var code2 = _.map(link => {
     var file = link.split('/').pop();
     var path = 'mods/' + file;
-    return `if exist "${file}" (
+    return `if exist "mods/${file}" (
         echo ${file} alreasy exist
     ) else (
         ${'powershell -c "Invoke-WebRequest -Uri \'' + link + '\' -OutFile \'' + path + '\'" & echo downloaded ' + file}

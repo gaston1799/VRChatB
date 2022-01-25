@@ -8,6 +8,8 @@ this modpack consist of anti-crash mods,more avatar favs, better performace mods
 All mods in this pack can be found on the VRChat modding group <a href="https://discord.com/invite/PfeDtJT">discord server</a>
 # Versions
 
+## V3.3
+- Intaller will no longer overwrite existing mods
 ## V-3.2
 - Added Mltn World Tweaks,BetterLocomotion,VRCX Companion,UserHistory,AskToPortal,UserInfoExtensions,CrawlSpeedToggle,IKTweaks
 ## V-3.1

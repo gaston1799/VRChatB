@@ -5,9 +5,14 @@ you are seeing this on GitHub download and install git (<a href="https://git-scm
 
 this modpack consist of anti-crash mods,more avatar favs, better performace mods ect.
 <br>
-All mods in this pack can be found on the VRChat modding group <a href="https://discord.com/invite/PfeDtJT">discord server</a>
+All mods in this pack can be found on the VRChat modding group <a href="https://discord.com/invite/PfeDtJT">discord server</a><br>
+
+please make sure that you have deleted any existing mods in folder this installer will not overwrite existing mods meaning they wont be updated if it already exists
+
 # Versions
 
+## V-3.4
+- Added PlayerList
 ## V-3.3
 - Intaller will no longer overwrite existing mods
 ## V-3.2

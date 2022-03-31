@@ -164,7 +164,6 @@ const tester = async e => {
 }
 
 var borken_mod = `ActiveBackground
-AdvancedInvites
 AskToPortal
 AvatarLimbsGrabber
 BetterDirections
@@ -232,6 +231,8 @@ var _ = [
     "https://api.vrcmg.com/v0/mods/296/MltnWorldTweaks.dll",
     "https://api.vrcmg.com/v0/mods/295/BetterLocomotion.dll",
     "https://api.vrcmg.com/v0/mods/291/Mic_Hider.dll",
+    "https://api.vrcmg.com/v0/mods/186/PlayerList.dll",
+    "https://api.vrcmg.com/v0/mods/108/AdvancedInvites.dll",
     "https://api.vrcmg.com/v0/mods/294/CrawlSpeedToggle.dll",
     "https://api.vrcmg.com/v0/mods/255/NetworkSanity.dll",
     "https://api.vrcmg.com/v0/mods/173/BetterSteadycam.dll",

@@ -99,6 +99,12 @@ if exist "mods/Mic_Hider.dll" (
         powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/291/Mic_Hider.dll' -OutFile 'mods/Mic_Hider.dll'" & echo downloaded Mic_Hider.dll
     )
 
+if exist "mods/AdvancedInvites.dll" (
+        echo AdvancedInvites.dll alreasy exist
+    ) else (
+        powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/108/AdvancedInvites.dll' -OutFile 'mods/AdvancedInvites.dll'" & echo downloaded AdvancedInvites.dll
+    )
+
 if exist "mods/CrawlSpeedToggle.dll" (
         echo CrawlSpeedToggle.dll alreasy exist
     ) else (

@@ -387,6 +387,9 @@ cls
 echo.
 echo Question?...
 echo.
+title %id%
+echo mods are installed at "%id%"
+echo
 set /p menu="Do you want to restart your game? (Y/N): "
 if %menu%==Y goto Yes
 if %menu%==y goto Yes

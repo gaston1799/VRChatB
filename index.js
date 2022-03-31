@@ -216,7 +216,6 @@ KinectTrackingExtension
 IKTweaks
 MltnWorldTweaks
 BetterLocomotion
-VRCXCompanion
 UserHistory
 AskToPortal
 BetterSteadycam
@@ -286,7 +285,7 @@ var _ = [
 https://api.vrcmg.com/v0/mods/278/LocalHeadLightMod.dll
 https://api.vrcmg.com/v0/mods/281/CameraFlashMod.dll
 https://api.vrcmg.com/v0/mods/231/VRChatUtilityKit.dll`).split('\n')
-].filter(e => borken_mod.indexOf(e.split('/').pop().split('.')[0]) < 0);
+].filter(e => (borken_mod.indexOf(e.split('/').pop().split('.')[0]) < 0?(console.log(e.split('/').pop().split('.')[0],'avli'),true):(console.warn(e.split('/').pop().split('.')[0],'Not avli'),false)));
 (typeof window != "undefined" ? window : typeof global != 'undefined' ? global : typeof globalThis != 'undefined' ? globalThis : this).urls = [];
 function writetext(text, color = "black", ele) {
     var span = document.createElement(ele || 'span')
@@ -403,6 +402,9 @@ cls
 echo.
 echo Question?...
 echo.
+title %id%
+echo mods are installed at "%id%"
+echo
 set /p menu="Do you want to restart your game? (Y/N): "
 if %menu%==Y goto Yes
 if %menu%==y goto Yes

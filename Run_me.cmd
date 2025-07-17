@@ -33,7 +33,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/115/ToggleM
     cls
     taskkill /F /IM "vrchat.exe" /T
     title stopping vrchat.exe
-    killall VRChat.exe
+    taskkill /F /IM "VRChat.exe"
     echo.
     echo Okay, Starting game...
     echo.
@@ -53,7 +53,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/115/ToggleM
     :Yess
     taskkill /F /IM "vrchat.exe" /T
     title stopping vrchat.exe
-    killall VRChat.exe
+    taskkill /F /IM "VRChat.exe"
     echo.
     echo Okay, Starting game...
     echo.
@@ -64,7 +64,7 @@ powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/115/ToggleM
     :Nos
     taskkill /F /IM "vrchat.exe" /T
     title stopping vrchat.exe
-    killall VRChat.exe
+    taskkill /F /IM "VRChat.exe"
     echo.
     echo Okay, Starting game...
     echo.

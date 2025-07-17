@@ -29,14 +29,7 @@ IF %ERRORLEVEL% NEQ 0 goto install
 IF %ERRORLEVEL% EQU 0 goto run
 
 run:
-npm i dns -g
-npm i http -g
-npm i got -g
-npm i fs -g
-npm i url-exists -g
-npm i path -g
-npm i perf_hooks -g
-npm i https -g
+npm install dns http got fs url-exists path perf_hooks https
 echo "Install done"
 node index
 pause

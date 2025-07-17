@@ -422,7 +422,7 @@ goto A
 cls
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.
@@ -440,7 +440,7 @@ start /b "" cmd /c del "%~f0"&exit /b
 :Yess
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.
@@ -449,7 +449,7 @@ start /b "" cmd /c del "%~f0"&exit /b
 :Nos
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.

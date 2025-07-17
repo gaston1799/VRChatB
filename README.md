@@ -59,4 +59,5 @@ please make sure that you have deleted any existing mods in folder this installe
 
 ## Usage
 Run the `_installer.cmd` script to download mods into your VRChat installation.
+You can also use the Node script `mod_menu.js` to interactively select which mods to install. Run `node mod_menu.js` and follow the prompts.
 Make sure VRChat is closed before running the installer.

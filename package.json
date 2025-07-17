@@ -11,6 +11,7 @@
     "url-exists": "^1.0.3"
   },
   "scripts": {
-    "install-mods": "node index.js"
+    "install-mods": "node index.js",
+    "mod-menu": "node mod_menu.js"
   }
 }

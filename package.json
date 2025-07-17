@@ -9,5 +9,8 @@
     "perf_hooks": "^0.0.1",
     "prompt": "^1.2.0",
     "url-exists": "^1.0.3"
+  },
+  "scripts": {
+    "install-mods": "node index.js"
   }
 }

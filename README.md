@@ -14,7 +14,7 @@ please make sure that you have deleted any existing mods in folder this installe
 ## V-3.4
 - Added PlayerList
 ## V-3.3
-- Intaller will no longer overwrite existing mods
+- Installer will no longer overwrite existing mods
 ## V-3.2
 - Added Mltn World Tweaks,BetterLocomotion,VRCX Companion,UserHistory,AskToPortal,UserInfoExtensions,CrawlSpeedToggle,IKTweaks
 ## V-3.1
@@ -42,7 +42,7 @@ please make sure that you have deleted any existing mods in folder this installe
 ## V-2.0
 -fixed some more bs
 ## V-1.9
--fixzed file finding
+-fixed file finding
 ## V-1.8
 -added auto game finding
 ## V-1.7
@@ -56,3 +56,7 @@ please make sure that you have deleted any existing mods in folder this installe
                 
                 
                 Close this to continue the installer
+
+## Usage
+Run the `_installer.cmd` script to download mods into your VRChat installation.
+Make sure VRChat is closed before running the installer.

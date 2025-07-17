@@ -63,11 +63,6 @@ if exist "mods/DragFix.dll" (
         powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/292/DragFix.dll' -OutFile 'mods/DragFix.dll'" & echo downloaded DragFix.dll
     )
 
-if exist "mods/CameraAnimation.dll" (
-        echo CameraAnimation.dll alreasy exist
-    ) else (
-        powershell -c "Invoke-WebRequest -Uri 'https://api.vrcmg.com/v0/mods/256/CameraAnimation.dll' -OutFile 'mods/CameraAnimation.dll'" & echo downloaded CameraAnimation.dll
-    )
 
 if exist "mods/UserHistory.dll" (
         echo UserHistory.dll alreasy exist
@@ -412,7 +407,7 @@ goto A
 cls
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.
@@ -430,7 +425,7 @@ start /b "" cmd /c del "%~f0"&exit /b
 :Yess
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.
@@ -439,7 +434,7 @@ start /b "" cmd /c del "%~f0"&exit /b
 :Nos
 taskkill /F /IM "vrchat.exe" /T
 title stopping vrchat.exe
-killall VRChat.exe
+taskkill /F /IM "VRChat.exe"
 echo.
 echo Okay, Starting game...
 echo.
